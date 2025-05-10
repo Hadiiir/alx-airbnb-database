@@ -1,27 +1,16 @@
-# Database Schema Documentation
+# Database Seeding Script
 
-## **Tables**
-1. **Users**  
-   - Stores user details (hosts & guests).  
-   - `user_id` is a UUID primary key.  
+## **Purpose**
+Populates the database with sample data for testing and development.
 
-2. **Addresses**  
-   - Normalized location data (3NF compliance).  
-   - Linked to `properties`.  
-
-3. **Properties**  
-   - Airbnb listings with host and address references.  
-
-4. **Bookings**  
-   - Reservation system with date validation (`CHECK` constraint).  
-
-5. **Reviews**  
-   - User ratings (1-5) with referential integrity.  
-
-## **Indexes**
-- Created on frequently queried columns (`host_id`, `user_id`, `property_id`).  
+## **Tables Seeded**
+1. **Users** → 3 sample users.
+2. **Addresses** → 3 property locations.
+3. **Properties** → 3 Airbnb listings.
+4. **Bookings** → 3 reservations.
+5. **Reviews** → 3 guest ratings.
 
 ## **How to Use**
-1. Run `schema.sql` in PostgreSQL:
+1. Run the script:
    ```bash
-   psql -U username -d dbname -f schema.sql
+   psql -U username -d dbname -f seed.sql
