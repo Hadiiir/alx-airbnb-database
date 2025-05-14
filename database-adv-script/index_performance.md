@@ -1,7 +1,8 @@
-# Index Performance Analysis
+# Query Performance Analysis with EXPLAIN ANALYZE
 
-## Before Index Implementation
+## Test Query 1: User Lookup by Email
 
-### Sample Query 1: Find user by email
+### Before Index
 ```sql
-EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'user@example.com';
+EXPLAIN ANALYZE 
+SELECT * FROM users WHERE email = 'test@example.com';
