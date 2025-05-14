@@ -1,4 +1,5 @@
--- Initial inefficient query
+-- Initial query with EXPLAIN analysis
+EXPLAIN ANALYZE 
 SELECT 
     b.booking_id,
     u.user_id,
@@ -24,7 +25,8 @@ WHERE
 ORDER BY 
     b.check_in_date DESC;
 
--- Optimized query
+-- Optimized query with EXPLAIN analysis
+EXPLAIN ANALYZE
 SELECT 
     b.booking_id,
     b.user_id,
